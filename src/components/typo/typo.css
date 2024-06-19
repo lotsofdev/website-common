@@ -20,8 +20,8 @@
     font-size: s-size(60);
   }
 }
-.typo-rhythm .typo-h1,
-.typo-rhythm.typo-format h1 {
+.typo-rhythm * + .typo-h1,
+.typo-rhythm.typo-format * + h1 {
   margin-top: s-space(60);
 
   @media mobile {
@@ -38,8 +38,8 @@
     font-size: s-size(45);
   }
 }
-.typo-rhythm .typo-h2,
-.typo-rhythm.typo-format h2 {
+.typo-rhythm * + .typo-h2,
+.typo-rhythm.typo-format * + h2 {
   margin-top: s-space(60);
 
   @media mobile {
@@ -56,8 +56,8 @@
     font-size: s-size(35);
   }
 }
-.typo-rhythm .typo-h3,
-.typo-rhythm.typo-format h3 {
+.typo-rhythm * + .typo-h3,
+.typo-rhythm.typo-format * + h3 {
   margin-top: s-space(60);
 
   @media mobile {
@@ -74,8 +74,8 @@
     display: none;
   }
 }
-.typo-rhythm .typo-p,
-.typo-rhythm.typo-format p {
+.typo-rhythm * + .typo-p,
+.typo-rhythm.typo-format * + p {
   margin-top: s-space(40);
 
   @media mobile {
@@ -95,8 +95,8 @@
     line-height: 32px;
   }
 }
-.typo-rhythm .typo-lead,
-.typo-rhythm.typo-format .typo-lead + p {
+.typo-rhythm * + .typo-lead,
+.typo-rhythm.typo-format * + .typo-lead + p {
   margin-top: s-space(60);
 
   @media mobile {
@@ -118,7 +118,7 @@
   color: s-color(accent);
 }
 
-.typo-rhythm .btn {
+.typo-rhythm * + .btn {
   margin-top: s-space(40);
 }
 
@@ -169,10 +169,10 @@
   }
 }
 
-.typo-rhythm .typo-ul,
-.typo-rhythm.typo-format ul,
-.typo-rhythm .typo-ol,
-.typo-rhythm.typo-format ol {
+.typo-rhythm * + .typo-ul,
+.typo-rhythm.typo-format * + ul,
+.typo-rhythm * + .typo-ol,
+.typo-rhythm.typo-format * + ol {
   margin-top: s-space(40);
 
   @media mobile {
@@ -183,9 +183,26 @@
 .typo-code,
 .typo-format code {
 }
-.typo-rhythm .typo-code,
-.typo-rhythm.typo-format code,
-.typo-rhythm .astro-code {
+.typo-rhythm * + .typo-code,
+.typo-rhythm.typo-format * + code,
+.typo-rhythm * + .astro-code {
+  margin-top: s-space(40);
+
+  @media mobile {
+    margin-top: s-space(20);
+  }
+}
+
+.typo-blockquote,
+.typo-format blockquote {
+  border-inline-start: 4px solid s-color(accent);
+  background: s-color(main, background);
+  padding-block: s-space(40);
+  @s-radius();
+}
+.typo-rhythm * + .typo-blockquote,
+.typo-rhythm.typo-format * + blockquote,
+.typo-rhythm * + .astro-blockquote {
   margin-top: s-space(40);
 
   @media mobile {
